@@ -6,12 +6,14 @@ if [ $# -ne 1 ]; then
 	exit 1
 fi
 
+# 定数定義
 DATABASE=$1
-
 CSVDIR=csvfiles/
 
+# ダウンロードしてきたCSVファイルはASCIIコードなのでUTF-8に変換する
 nkf -w8 --overwrite csvfiles/* && nkf -g csvfiles/* | grep "UTF-8" 2>&1 >/dev/null && echo "conversion into UTF-8 succeeded"
 
+# CSVファイル名の取得
 STATION_CSV=`ls -tlr csvfiles/ | awk '{if ( NR>1 ) print $10}' | grep "station"`
 PREF_CSV=`ls -tlr csvfiles/ | awk '{if ( NR>1 ) print $10}' | grep "pref"`
 LINE_CSV=`ls -tlr csvfiles/ | awk '{if ( NR>1 ) print $10}' | grep "line"`
