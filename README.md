@@ -19,6 +19,7 @@ Confirmed by the following environment:
 * Create tables from linedata.sql.
 * Download CSV files from http://www.ekidata.jp (User registration is needed).
 * Put them in the directory LineData/csvfiles/
+  * Caution! Now CSV files are in LineData/csvfiles/, but they may be old.
 * Supposing database name is sampledb and you're in the LineData directory, execute the following command:
 ```
 ./linedata_insertion.sh sampledb
