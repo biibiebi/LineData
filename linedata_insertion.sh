@@ -38,8 +38,8 @@ else
 fi
 
 # Insert line data into table.
-mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${STATION_CSV}' into table stations fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of station data succeeded"
-mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${PREF_CSV}' into table prefectures fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of prefecture data succeeded"
-mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${LINE_CSV}' into table railway_lines fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of line data succeeded"
-mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${JOIN_CSV}' into table joins fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of join data succeeded"
-mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${COMPANY_CSV}' into table railway_companies fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of railway_company data succeeded"
+mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${STATION_CSV}' into table station fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of station data succeeded"
+mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${PREF_CSV}' into table prefecture fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of prefecture data succeeded"
+mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${LINE_CSV}' into table railway_line fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of line data succeeded"
+mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${JOIN_CSV}' into table \`join\` fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of join data succeeded"
+mysql -u $MYSQL_USER -p$MYSQL_PASS $DATABASE -h $MYSQL_HOST -e "load data local infile '${CSVDIR}${COMPANY_CSV}' into table railway_company fields terminated by ',' IGNORE 1 LINES;" && echo "insertion of railway_company data succeeded"
