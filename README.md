@@ -16,9 +16,10 @@ Confirmed by the following environment:
   * User     as $MYSQL_USER
   * Password as $MYSQL_PASS
   * Host     as $MYSQL_HOST
-
+* Create tables from linedata.sql.
 * Download CSV files from http://www.ekidata.jp (User registration is needed).
 * Put them in the directory LineData/csvfiles/
+  * Caution! Now CSV files are in LineData/csvfiles/, but they may be old.
 * Supposing database name is sampledb and you're in the LineData directory, execute the following command:
 ```
 ./linedata_insertion.sh sampledb
